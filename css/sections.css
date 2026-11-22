@@ -7,7 +7,7 @@
 .hero{padding:96px 0 112px;background:#f5fafc url(../assets/images/img26.png) center/cover no-repeat;overflow:hidden}
 .hero .split{grid-template-columns:.95fr 1.05fr}
 .kv{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;height:625px;margin-right:calc((100vw - min(var(--max),100vw - 32px))/-2)}
-.kv img{width:100%;height:550px;object-fit:cover}
+.kv img{width:100%;height:550px;object-fit:cover;border-radius:14px;box-shadow:0 12px 30px rgba(27,58,107,.12)}
 .kv img:nth-child(odd){margin-top:75px}
 
 /* 02 Promise + 4 dải hành trình ảnh (phiên bản demo gốc) */
@@ -26,11 +26,16 @@
 .journey-rows .big i{font-weight:300;font-style:normal;display:block}
 .journey-rows .foot{border-top:1px solid rgba(255,255,255,.5);padding-top:16px;font-size:13px}
 
-/* 03 About */
-.about .frame{aspect-ratio:4/3}
-.statbar{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border-top:1px solid var(--line);padding-top:40px}
-.statbar div{padding:0 24px;border-left:1px solid var(--line)}
-.statbar div:first-child{border-left:0;padding-left:0}
+/* 03 About — ghim khi cuộn: mỗi bước sáng 1 số liệu + đổi 1 ảnh */
+.about-scroll{position:relative;background:var(--surface);height:calc(100vh * (var(--steps,4) + 1))}
+.about-sticky{position:sticky;top:80px;height:calc(100vh - 80px);display:flex;align-items:center;overflow:hidden}
+.about-sticky .container{width:min(var(--max),100% - 32px)}
+.stack-ph{position:relative;aspect-ratio:4/3;max-height:calc(100vh - 300px);width:100%}
+.stack-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 1.2s ease}
+.stack-ph img.on{opacity:1;transform:none}
+.statbar{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(20px,4vh,48px);position:relative}
+.statbar div{padding:24px 24px 0 0;opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .5s,transform .5s,visibility .5s}
+.statbar div.on{opacity:1;visibility:visible;transform:none}
 .statbar b{display:block;font-size:clamp(28px,3vw,40px);font-weight:700;color:var(--blue);line-height:1.2}
 .statbar span{display:block;margin-top:12px;color:var(--gray);font-size:15px}
 
@@ -152,3 +157,11 @@
 .legal{border-top:1px solid rgba(255,255,255,.25);margin-top:48px;padding-top:24px;font-size:13px;color:#a0a8b8;display:flex;flex-wrap:wrap;gap:10px 28px}
 
 .lead.wide{max-width:96ch}
+
+@media (min-width:901px) and (max-height:820px){
+  .about-scroll .h1{font-size:clamp(28px,3.4vw,42px)}
+  .about-scroll .lead{font-size:15px;margin-top:12px}
+  .about-scroll .actions{margin-top:20px}
+  .statbar div{padding-top:12px}
+  .statbar span{margin-top:6px}
+}

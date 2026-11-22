@@ -16,13 +16,16 @@
   .kv img:nth-child(odd){margin-top:40px}
   .promise-top{grid-template-columns:1fr}
   .statbar{grid-template-columns:1fr 1fr;row-gap:32px}
-  .statbar div:nth-child(3){border-left:0;padding-left:0}
   .brand-grid{grid-template-columns:1fr}
   .figures{grid-template-columns:1fr 1fr}
   .fig:nth-child(3){border-left:0;padding-left:0}
   .brand-main{grid-template-columns:1fr 130px;padding:32px}
   .fgrid{grid-template-columns:1fr 1fr}
-  .about .frame,.human .frame{order:-1}
+  .human .frame{order:-1}
+  .about-scroll{height:auto;padding:var(--section-y) 0}
+  .about-sticky{position:static;height:auto;display:block}
+  .about-scroll .stack-ph{order:-1}
+  .statbar div{opacity:1;visibility:visible;transform:none}
 }
 @media (max-width:600px){
   .header{height:68px}
