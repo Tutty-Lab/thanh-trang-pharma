@@ -1,0 +1,75 @@
+/* Các mục lấy nguyên từ phương án A: "Gìn giữ giá trị" (ghim 4 ảnh) và "Giá trị bắt đầu" */
+.about-scroll,.brands{--surface:#fff;--line:#dde3ec;--blue:#2459a8;--gray:#6b7280;--ink:#1f2937;--navy:#1b3a6b;--orange:#f68e28;--green:#5b8a5a;--green-soft:#f1f7f0;--bg:#f7f8fa;--radius:12px;--radius-sm:8px;--shadow:0 10px 30px rgba(27,58,107,.08);--section-y:120px}
+.about-scroll .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-scroll .frame{border-radius:12px;overflow:hidden;background:#eef2f7}
+.about-scroll .lead{color:var(--gray);font-size:clamp(16px,1.3vw,18px);margin:20px 0 0;max-width:62ch}
+.about-scroll .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+.about-scroll .btn{border-radius:10px;padding:13px 22px;font-size:14px;justify-content:center}
+.brands{padding:120px 0;background:var(--bg)}
+.brands .lead{color:var(--gray);font-size:clamp(16px,1.3vw,18px);margin:20px 0 0;max-width:62ch}
+.brands .lead b{color:var(--ink)}
+.brands .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:10px;font-size:14px;font-weight:600;border:1.5px solid}
+/* 03 About — ghim khi cuộn: mỗi bước sáng 1 số liệu + đổi 1 ảnh */
+.pin{position:relative;height:calc(100vh * (var(--steps,4) + 1))}
+.pin-sticky{position:sticky;top:80px;height:calc(100vh - 80px);display:flex;align-items:center;overflow:hidden}
+.pin-sticky>.container{width:min(var(--max),100% - 32px)}
+.about-scroll{background:var(--surface)}
+.stack-ph{position:relative;aspect-ratio:4/3;max-height:calc(100vh - 300px);width:100%}
+.stack-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 1.2s ease}
+.stack-ph img.on{opacity:1;transform:none}
+.statbar{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(20px,4vh,48px);position:relative}
+.statbar div{padding:24px 24px 0 0;opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .5s,transform .5s,visibility .5s}
+.statbar div.on{opacity:1;visibility:visible;transform:none}
+.statbar b{display:block;font-size:clamp(28px,3vw,40px);font-weight:700;color:var(--blue);line-height:1.2}
+.statbar span{display:block;margin-top:12px;color:var(--gray);font-size:15px}
+
+/* 04 Brands — 1 đối tác chủ lực + danh sách đối tác mở rộng */
+.brand-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;margin-top:56px;align-items:stretch}
+.brand-tag{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue)}
+.brand-main{background:var(--green-soft);border:1px solid #d5e5d3;border-radius:16px;padding:40px;display:grid;grid-template-columns:1fr 160px;gap:32px;align-items:center}
+.brand-main .brand-tag{color:var(--green)}
+.brand-main h3{margin:0;font-size:clamp(28px,2.6vw,36px);font-weight:700;color:var(--navy);line-height:1.2}
+.brand-meta{margin:16px 0 4px;font-weight:600;color:var(--green)}
+.brand-main-txt>p:not(.brand-tag):not(.brand-meta){color:var(--gray);margin:0 0 28px}
+.btn-green{background:#fff;border-color:#9dbd9b;color:var(--green)}
+.btn-green:hover{background:#e7f1e6}
+.packshot{position:relative;aspect-ratio:3/5;display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px}
+.packshot::before{content:"";position:absolute;inset:auto 8% 4px;height:18px;border-radius:50%;background:radial-gradient(rgba(0,0,0,.18),transparent 70%)}
+.bottle{position:relative;width:78%;margin-right:22%;z-index:1;display:flex;flex-direction:column;align-items:center}
+.bottle .cap{width:58%;height:30px;border-radius:6px 6px 2px 2px;background:linear-gradient(90deg,#0f6a3a,#1f8a4f 45%,#0d5a31)}
+.bottle .body{width:100%;aspect-ratio:3/4.2;margin-top:-2px;border-radius:18px 18px 12px 12px;background:linear-gradient(90deg,#f4f4ef,#fff 35%,#e9e9e2);box-shadow:inset 0 -6px 12px rgba(0,0,0,.06);display:flex;align-items:center}
+.bottle .label{width:100%;background:#00894a;color:#fff;padding:12px 8px 10px;text-align:center;display:grid;gap:4px}
+.bottle .label img{width:80%;margin:0 auto;border-radius:2px}
+.bottle em{font-style:normal;font-size:11px;font-weight:600}
+.bottle small{font-size:9px;opacity:.8}
+.box-pack{position:absolute;right:-30px;bottom:4px;width:40%;aspect-ratio:3/4;background:linear-gradient(160deg,#fff,#eef4ee);border:1px solid #d5e5d3;border-radius:6px;box-shadow:var(--shadow);transform:rotate(6deg);display:grid;align-content:center;justify-items:center;gap:6px;padding:8px;z-index:2}
+.box-pack img{width:90%;border-radius:2px}
+.box-pack em{font-style:normal;font-size:10px;font-weight:700;color:var(--green)}
+.brand-list{display:grid;gap:20px;align-content:start}
+.brand-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px 32px;display:grid;grid-template-columns:1fr 112px;gap:24px;align-items:center;transition:.25s}
+.brand-card:hover{box-shadow:var(--shadow)}
+.brand-card h4{margin:0 0 8px;font-size:20px;font-weight:600;color:var(--navy);line-height:1.35}
+.brand-card p:last-child{margin:0;color:var(--gray);font-size:14px}
+.logo-box{aspect-ratio:1;border-radius:14px;display:grid;place-items:center;align-content:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em}
+.lb-blue{background:linear-gradient(145deg,#e8f0fd,#d4e3fb);color:var(--blue)}
+.lb-orange{background:linear-gradient(145deg,#fff4e8,#ffe2c4);color:var(--orange)}
+.logo-box img{max-width:80%;max-height:70%}
+
+.lead.wide{max-width:96ch}
+@media (min-width:901px) and (max-height:820px){
+  .pin .h1{font-size:clamp(28px,3.4vw,42px)}
+  .pin .lead{font-size:15px;margin-top:12px}
+  .pin .actions{margin-top:20px}
+  .statbar div{padding-top:12px}
+  .statbar span{margin-top:6px}
+}
+@media (max-width:900px){
+ .about-scroll .split,.brand-grid{grid-template-columns:1fr}
+ .about-scroll .stack-ph{order:-1}
+ .statbar{grid-template-columns:1fr 1fr;row-gap:24px}
+ .statbar div{opacity:1;visibility:visible;transform:none}
+ .brand-main{grid-template-columns:1fr 130px;padding:32px}
+}
+@media (max-width:600px){.brand-main{grid-template-columns:1fr}.brand-card{grid-template-columns:1fr 80px;padding:24px}}
+/* Dải ảnh hero bo góc */
+.strips img{border-radius:14px;box-shadow:0 12px 30px rgba(27,58,107,.12)}

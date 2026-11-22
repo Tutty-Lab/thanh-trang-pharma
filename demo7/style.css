@@ -276,3 +276,26 @@ em,i,cite{font-style:normal}
 .cta .container{text-align:center;justify-items:center}
 .cta .container p{margin-left:auto;margin-right:auto;max-width:640px}
 .cta-actions{justify-content:center}
+
+/* Bo góc mọi ảnh/khung vuông */
+.person,.feature img,.tile,.card .ph,.photo,.split img.photo,.partner img,.frame,.stack-ph{border-radius:14px;overflow:hidden}
+.card .ph{border-radius:14px 14px 0 0}.card .bar{border-radius:0 0 14px 14px}
+.people{gap:16px}
+.feature img{object-position:50% 18%}
+
+/* CTA cuối — theo bản PDF: nền ảnh bàn tay phủ navy, chữ trái, 2 nút phải */
+.cta-pdf{position:relative;overflow:hidden;isolation:isolate;color:#fff;padding:clamp(120px,14vw,210px) 0}
+.cta-pdf .cta-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.cta-pdf::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,47,93,.78),rgba(21,47,93,.45) 60%,rgba(21,47,93,.3));z-index:-1}
+.cta-pdf .container{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;text-align:left}
+.cta-pdf h2{margin:0;font-size:clamp(40px,5vw,64px);font-weight:600;line-height:1.15;color:#fff}
+.cta-pdf .cta-sub{margin:6px 0 0;font-size:clamp(24px,2.6vw,34px);font-weight:500;color:#9dbcf0;line-height:1.3}
+.cta-pdf .cta-body{margin:22px 0 0;max-width:620px;color:#c3cee3;font-size:16px;line-height:1.65}
+.cta-btns{display:grid;gap:12px;min-width:260px}
+.cbtn{display:flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:12px;font-weight:600;font-size:15px;transition:.2s;text-decoration:none}
+.cbtn.solid{background:#1e4086;color:#fff;border:1.5px solid #1e4086}
+.cbtn.solid:hover{background:#244c9c}
+.cbtn.line{border:1.5px solid rgba(255,255,255,.85);color:#fff}
+.cbtn.line:hover{background:rgba(255,255,255,.1)}
+@media (max-width:900px){.cta-pdf .container{grid-template-columns:1fr;gap:32px}.cta-btns{min-width:0;grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.cta-btns{grid-template-columns:1fr}}
