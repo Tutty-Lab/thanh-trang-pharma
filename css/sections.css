@@ -152,7 +152,7 @@
 .footer h4{font-size:15px;font-weight:600;color:var(--orange);margin:0 0 20px;text-transform:uppercase;letter-spacing:.04em}
 .footer ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .footer ul a:hover{color:#fff}
-.footer .about p{margin:24px 0;color:#b8c0c8;max-width:280px}
+.footer .f-about p{margin:24px 0;color:#b8c0c8;max-width:280px}
 .social{display:flex;gap:14px;align-items:center}
 .contact li{display:flex;gap:10px;align-items:flex-start}
 .contact img{width:16px;margin-top:4px;opacity:.8}
@@ -167,3 +167,4 @@
   .statbar div{padding-top:12px}
   .statbar span{margin-top:6px}
 }
+.b2b-tile img{object-position:50% 28%}
