@@ -17,15 +17,13 @@
   .promise-top{grid-template-columns:1fr}
   .statbar{grid-template-columns:1fr 1fr;row-gap:32px}
   .brand-grid{grid-template-columns:1fr}
-  .figures{grid-template-columns:1fr 1fr}
-  .fig:nth-child(3){border-left:0;padding-left:0}
   .brand-main{grid-template-columns:1fr 130px;padding:32px}
   .fgrid{grid-template-columns:1fr 1fr}
   .human .frame{order:-1}
-  .about-scroll{height:auto;padding:var(--section-y) 0}
-  .about-sticky{position:static;height:auto;display:block}
-  .about-scroll .stack-ph{order:-1}
-  .statbar div{opacity:1;visibility:visible;transform:none}
+  .pin{height:auto;padding:var(--section-y) 0}
+  .pin-sticky{position:static;height:auto;display:block}
+  .pin .stack-ph{order:-1}
+  .statbar div,.fig{opacity:1;visibility:visible;transform:none}
 }
 @media (max-width:600px){
   .header{height:68px}
@@ -45,8 +43,6 @@
   .needs{grid-template-columns:1fr 1fr;gap:14px}
   .need h3{font-size:16px}
   .b2b-tiles,.fgrid{grid-template-columns:1fr}
-  .fig{padding:28px 16px 0}
-  .fig:nth-child(odd){padding-left:0}
   .people,.posts{grid-template-columns:1fr;gap:32px}
   .person .frame{aspect-ratio:4/5}
   .post .frame{aspect-ratio:16/10}
