@@ -168,3 +168,4 @@
   .statbar span{margin-top:6px}
 }
 .b2b-tile img{object-position:50% 28%}
+.promise-top{grid-template-columns:1fr}
