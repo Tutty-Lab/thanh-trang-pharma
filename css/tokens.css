@@ -1,0 +1,25 @@
+/* Design tokens — theo "Nguyên tắc nhận diện" trong layout
+   WHITE SPACE: nền chủ đạo · BLUE: cấu trúc/headline/line · ORANGE: điểm chạm/chuyển giao */
+:root{
+  --navy:#1b3a6b;        /* headline */
+  --blue:#2459a8;        /* line, link, số liệu */
+  --blue-soft:#7ca2e6;
+  --orange:#f68e28;      /* chấm cam = khoảnh khắc chuyển giao */
+  --orange-soft:#fff2e6;
+  --green-soft:#f1f7f0;  /* card đối tác chủ lực */
+  --green:#5b8a5a;
+  --ink:#1f2937;
+  --gray:#6b7280;
+  --line:#dde3ec;
+  --bg:#f7f8fa;          /* white space */
+  --surface:#ffffff;
+  --surface-2:#eef2f7;
+  --navy-d:#152f5d;      /* footer */
+
+  --font:"Be Vietnam Pro",system-ui,sans-serif;
+  --max:1222px;
+  --radius:12px;
+  --radius-sm:8px;
+  --section-y:120px;
+  --shadow:0 10px 30px rgba(27,58,107,.08);
+}

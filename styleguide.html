@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thanh Trang Pharma — Design System</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+ .sg{padding:64px 0 120px}
+ .sg-sec{padding:48px 0;border-top:1px solid var(--line)}
+ .sg-sec>h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin:0 0 24px;font-weight:600}
+ .sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}
+ .sw{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff}
+ .sw div{height:88px}.sw p{margin:0;padding:10px 12px;font-size:13px}.sw code{display:block;color:var(--gray)}
+ .row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+ .type p{margin:0 0 24px}.type small{display:block;color:var(--gray);font-size:12px;margin-bottom:4px}
+ .principles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+ .principles div{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff}
+ .principles b{display:block;color:var(--blue);margin-bottom:6px}
+ .demo3{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="arr" viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+<header class="header"><div class="container"><a class="logo" href="index.html"><img src="assets/icons/logo.png" alt="Thanh Trang Pharma"></a><div class="header-right" style="margin-left:auto"><a class="btn btn-ghost" href="index.html">← Trang chủ</a></div></div></header>
+
+<main class="container sg">
+ <p class="eyebrow">Design system</p>
+ <h1 class="h1">Thanh Trang Pharma<br><span class="accent">Trọn vẹn trao tay</span></h1>
+ <p class="lead">Token và thành phần của trang chủ. Đổi giá trị trong <code>css/tokens.css</code> là toàn bộ site đổi theo.</p>
+
+ <section class="sg-sec">
+  <h2>Nguyên tắc nhận diện</h2>
+  <div class="principles">
+   <div><b>White space</b>Nền chủ đạo — <code>--bg</code>, <code>--surface</code></div>
+   <div><b>Blue</b>Cấu trúc, headline, đường kẻ — <code>--navy</code>, <code>--blue</code></div>
+   <div><b style="color:var(--orange)">Orange</b>Điểm chạm, khoảnh khắc chuyển giao — <code>--orange</code></div>
+   <div><b>Real people</b>Con người &amp; sản phẩm là nhân vật chính — ảnh thật, không ảnh minh họa</div>
+  </div>
+ </section>
+
+ <section class="sg-sec">
+  <h2>Màu sắc</h2>
+  <div class="sw-grid">
+   <div class="sw"><div style="background:var(--navy)"></div><p>Navy<code>--navy</code></p></div>
+   <div class="sw"><div style="background:var(--blue)"></div><p>Blue<code>--blue</code></p></div>
+   <div class="sw"><div style="background:var(--orange)"></div><p>Orange<code>--orange</code></p></div>
+   <div class="sw"><div style="background:var(--orange-soft)"></div><p>Orange nhạt<code>--orange-soft</code></p></div>
+   <div class="sw"><div style="background:var(--green-soft)"></div><p>Xanh đối tác<code>--green-soft</code></p></div>
+   <div class="sw"><div style="background:var(--ink)"></div><p>Chữ chính<code>--ink</code></p></div>
+   <div class="sw"><div style="background:var(--gray)"></div><p>Chữ phụ<code>--gray</code></p></div>
+   <div class="sw"><div style="background:var(--bg)"></div><p>Nền<code>--bg</code></p></div>
+   <div class="sw"><div style="background:var(--surface-2)"></div><p>Nền khung<code>--surface-2</code></p></div>
+   <div class="sw"><div style="background:var(--navy-d)"></div><p>Footer<code>--navy-d</code></p></div>
+  </div>
+ </section>
+
+ <section class="sg-sec type">
+  <h2>Typography — Be Vietnam Pro</h2>
+  <p><small>.eyebrow</small><span class="eyebrow">01 / Hero</span></p>
+  <p><small>.h1.xl — hero</small><span class="h1 xl">Trọn vẹn trao tay</span></p>
+  <p><small>.h1 — tiêu đề section</small><span class="h1">Trọn vẹn một hành trình</span></p>
+  <p><small>.tagline — câu chủ đề màu cam</small><span class="tagline" style="display:block;margin:0">Từ nơi tạo nên giá trị đến tay người cần giá trị</span></p>
+  <p><small>.lead — đoạn mở</small><span class="lead" style="display:block;margin:0">Thanh Trang Pharma kết nối những sản phẩm chăm sóc sức khỏe chính hãng.</span></p>
+ </section>
+
+ <section class="sg-sec">
+  <h2>Nút &amp; link</h2>
+  <div class="row">
+   <a class="btn btn-primary" href="#">Trở thành đối tác</a>
+   <a class="btn btn-ghost" href="#">Khám phá Thanh Trang</a>
+   <a class="link" href="#">Khám phá</a>
+  </div>
+ </section>
+
+ <section class="sg-sec">
+  <h2>Hành trình trao tay (.journey) — chấm cam ở điểm cuối</h2>
+  <ol class="journey" style="margin-top:8px">
+   <li><span class="node"></span><i>01</i><h3>Nhà sản xuất</h3><p>Tạo nên giá trị</p></li>
+   <li><span class="node"></span><i>02</i><h3>Thanh Trang</h3><p>Gìn giữ &amp; kết nối</p></li>
+   <li><span class="node"></span><i>03</i><h3>Nhà thuốc</h3><p>Trao đúng lựa chọn</p></li>
+   <li><span class="node"></span><i>04</i><h3>Người dùng</h3><p>An tâm đón nhận</p></li>
+  </ol>
+ </section>
+
+ <section class="sg-sec">
+  <h2>Card</h2>
+  <div class="demo3">
+   <a class="need" href="#"><div class="box"><img src="assets/images/img110.jpg" alt=""><div class="txt"><h3>Xương khớp</h3><p>Vững vàng trong từng chuyển động.</p></div></div><span class="link">Khám phá</span></a>
+   <div class="proof dark" style="padding:28px;border-radius:12px"><div class="fig hl" style="padding:0"><b>123<sup>+</sup></b><span>Số liệu nổi bật (.fig.hl trên nền .proof.dark)</span></div></div>
+   <article class="b2b-tile"><img src="assets/images/img50.jpg" alt=""><span class="dot"></span><h3>Tile B2B</h3><p>Ảnh thật + lớp navy.</p></article>
+   <a class="post" href="#"><div class="frame"><img src="assets/images/img54.jpg" alt=""></div><p class="cat">Kiến thức sức khỏe</p><h3>Card tin: ảnh + category + headline + ngày + arrow</h3><div class="row"><span>12 · 08 · 2026</span><span class="link">Xem thêm</span></div></a>
+  </div>
+ </section>
+
+ <section class="sg-sec">
+  <h2>Khoảng cách &amp; lưới</h2>
+  <ul class="lead" style="color:var(--ink)">
+   <li>Container <code>--max: 1222px</code>, lề 16px mỗi bên ở màn nhỏ.</li>
+   <li>Section đệm <code>--section-y</code>: 120px (80px khi ≤ 900px). Section xen kẽ nền <code>--bg</code> / <code>--surface</code> (<code>.section.alt</code>).</li>
+   <li>Bố cục chính: <code>.split</code> 2 cột chữ trái — hình phải, xếp chồng khi ≤ 900px.</li>
+   <li>Bo góc: khung/card 12px, nút 8px.</li>
+   <li>Breakpoints: 1100 / 900 / 600px.</li>
+  </ul>
+ </section>
+</main>
+</body>
+</html>
